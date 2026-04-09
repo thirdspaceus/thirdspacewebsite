@@ -31,8 +31,8 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
       <div className="relative w-full h-full min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] bg-brand-dark rounded-[2rem] md:rounded-[2.5rem] overflow-hidden flex items-center justify-center shadow-lg">
         {/* Background Image/Video Placeholder */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#d97706_0%,_#000000_70%)] opacity-80" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_85%,_#ea580c_0%,_#9a3412_35%,_#000000_80%)] opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
         </div>
 
         {/* 3D Motion Element Placeholder */}
@@ -40,12 +40,12 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           initial={{ y: 100, opacity: 0, scale: 0.9 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="absolute bottom-0 right-0 w-full max-w-3xl z-10 pointer-events-none"
+          className="absolute bottom-[-5%] right-[-5%] w-[120%] md:w-full max-w-4xl z-10 pointer-events-none"
         >
           <img 
             src="https://framerusercontent.com/images/WLlehktco1TfNksSpRJQdyFeN5M.webp" 
             alt="Motion Element" 
-            className="w-full h-auto object-contain translate-y-1/4 translate-x-1/4 md:translate-x-0"
+            className="w-full h-auto object-contain translate-y-[10%] translate-x-[5%]"
             referrerPolicy="no-referrer"
           />
         </motion.div>
@@ -54,16 +54,16 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-20 w-full max-w-7xl mx-auto px-8 md:px-16 flex flex-col items-start gap-8"
+          className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-start gap-6 md:gap-8 translate-y-[-5%]"
         >
           <motion.div variants={itemVariants} className="flex items-center gap-2">
-            <span className="text-brand-offwhite font-mono text-[10px] uppercase tracking-widest">[ We are Stōkt ]</span>
+            <span className="text-brand-offwhite font-mono text-[10px] uppercase tracking-widest">[ We are ThirdSpace ]</span>
             <ArrowRight size={12} className="text-brand-offwhite" />
           </motion.div>
 
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-brand-offwhite leading-[0.9]"
+            className="text-5xl md:text-7xl lg:text-[6.5rem] font-medium tracking-tighter text-brand-offwhite leading-[0.9] -ml-1"
           >
             MOVING <br />
             BRANDS <br />
@@ -72,18 +72,18 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
 
           <motion.div variants={itemVariants} className="max-w-sm">
             <p className="text-brand-grey text-xs md:text-sm leading-relaxed">
-              Stōkt builds motion-driven brand systems, unifying branding, web, and motion into a single evolving execution.
+              ThirdSpace builds motion-driven brand systems, unifying branding, web, and motion into a single evolving execution.
             </p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-4">
-            <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-lg font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange hover:text-white transition-all duration-300">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-2">
+            <button className="flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange hover:text-white transition-all duration-300">
               <span>View Projects</span>
               <ArrowRight size={12} />
             </button>
             <button 
               onClick={onOpenQuote}
-              className="flex items-center gap-2 bg-black text-white px-6 py-2 rounded-lg font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange transition-all duration-300 border border-white/10"
+              className="flex items-center gap-2 bg-black text-white px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange transition-all duration-300 border border-white/10"
             >
               <span>Get a quote</span>
               <ArrowRight size={12} />
