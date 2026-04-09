@@ -38,7 +38,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           initial={{ y: 100, opacity: 0, scale: 0.9 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="pointer-events-none absolute bottom-[0%] right-[-10%] z-10 w-[110%] min-w-[500px] max-w-[900px] md:bottom-[5%] md:right-[0%] md:w-[60%] lg:w-[50%]"
+          className="pointer-events-none absolute bottom-[-10%] right-[-10%] z-10 w-[110%] min-w-[500px] max-w-[800px] md:bottom-[-20%] md:right-[-5%] md:w-[55%] lg:w-[45%]"
         >
           <img
             src="/hero-graphic.png"
@@ -61,28 +61,28 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
 
             <motion.h1
               variants={itemVariants}
-              className="text-[clamp(3.8rem,7.5vw,8.5rem)] font-medium leading-[0.98] tracking-[-0.04em] text-white"
+              className="text-[clamp(3.5rem,7vw,8rem)] font-medium leading-[0.98] tracking-[-0.04em] text-white"
             >
-              MOVING BRANDS<br />FORWARD
+              Let’s Take Space<br />Together.
             </motion.h1>
 
-            <motion.div variants={itemVariants} className="mt-4 max-w-[28rem]">
+            <motion.div variants={itemVariants} className="mt-4 max-w-[42rem]">
               <p className="text-[13px] leading-[1.6] text-white/80 md:text-[14px]">
-                ThirdSpace builds motion-led brand systems, unifying identity, web, and digital storytelling into one evolving execution.
+                We empower businesses by delivering innovative, data-driven strategies tailored to their unique goals. From crafting a strong brand identity to implementing high-impact digital marketing solutions, our team is dedicated to helping you establish a compelling presence in the digital space.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="mt-6 flex flex-wrap gap-4">
               <a
                 href="#portfolio"
-                className="flex items-center gap-2 rounded-lg bg-[#f3f3f3] px-5 py-2.5 font-mono text-[9px] uppercase tracking-[0.24em] text-brand-dark transition-transform duration-300 hover:scale-105"
+                className="flex items-center gap-2 rounded-lg bg-[#f3f3f3] px-5 py-2.5 font-mono text-[9px] uppercase tracking-[0.24em] text-brand-dark transition-all duration-300 hover:scale-105 hover:bg-brand-orange hover:text-white"
               >
                 <span>View Projects</span>
                 <ArrowRight size={10} />
               </a>
               <button
                 onClick={onOpenQuote}
-                className="flex items-center gap-2 rounded-lg bg-[#181818] px-5 py-2.5 font-mono text-[9px] uppercase tracking-[0.24em] text-white transition-colors duration-300 hover:bg-[#252525]"
+                className="flex items-center gap-2 rounded-lg bg-[#181818] px-5 py-2.5 font-mono text-[9px] uppercase tracking-[0.24em] text-white transition-colors duration-300 hover:bg-brand-orange hover:text-white"
               >
                 <span>Get a quote</span>
                 <ArrowRight size={10} />
