@@ -29,7 +29,7 @@ export const AboutUs = () => {
         </div>
 
         <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-12">
-          <div className="flex min-h-[300px] flex-col gap-6 lg:col-span-2">
+          <div className="flex flex-col gap-4 lg:col-span-3 lg:h-[400px]">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -37,10 +37,10 @@ export const AboutUs = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-1 flex-col items-start justify-center gap-3 rounded-xl border border-white/8 bg-[#141414] px-8 py-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                className="flex flex-1 flex-col items-center justify-center gap-1 rounded-xl border border-white/8 bg-[#141414] px-4 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] text-center"
               >
-                <span className="text-[clamp(2.8rem,4vw,4.2rem)] leading-none tracking-[-0.08em] text-brand-offwhite">{stat.value}</span>
-                <span className="max-w-[10ch] text-[11px] tracking-[-0.03em] text-white/58">{stat.label}</span>
+                <span className="text-[clamp(2.2rem,3vw,3.2rem)] font-medium leading-none tracking-tight text-brand-offwhite">{stat.value}</span>
+                <span className="text-[11px] tracking-tight text-white/50">{stat.label}</span>
               </motion.div>
             ))}
           </div>
@@ -49,21 +49,22 @@ export const AboutUs = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="group relative min-h-[520px] overflow-hidden rounded-xl border border-white/8 bg-[#141414] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] lg:col-span-4"
+            className="group relative h-[400px] overflow-hidden rounded-xl border border-white/8 bg-[#141414] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] lg:col-span-4 flex flex-col justify-end"
           >
-            <div className="relative z-10 flex flex-col gap-1">
-              <h3 className="text-[13px] tracking-[-0.04em] text-brand-offwhite">Framer Pro Expert & Partner</h3>
-              <button className="mb-1 flex items-center gap-2 text-[11px] tracking-[-0.03em] text-white/52 transition-colors hover:text-brand-offwhite">
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center pb-8 transition-transform duration-700 group-hover:scale-105">
+              <img
+                src="https://framerusercontent.com/images/tyrFyrRI41KJlV39p6QD9rGJdqQ.png"
+                alt="Framer Partner 3D"
+                className="h-auto w-[65%] object-contain drop-shadow-2xl opacity-90 mix-blend-screen"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="relative z-10 flex flex-col gap-1.5 mt-auto">
+              <h3 className="text-[12px] text-brand-offwhite font-medium tracking-tight">Framer Pro Expert & Partner</h3>
+              <button className="flex items-center gap-1.5 text-[11px] text-white/40 hover:text-white transition-colors w-fit">
                 <span>Learn More</span>
                 <ArrowRight size={10} />
               </button>
-            </div>
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-center pb-12 transition-transform duration-700 group-hover:scale-[1.04]">
-              <img
-                src="https://framerusercontent.com/images/tyrFyrRI41KJlV39p6QD9rGJdqQ.png"
-                alt="3D abstract art"
-                className="h-auto w-[58%] object-contain opacity-80 mix-blend-screen"
-              />
             </div>
           </motion.div>
 
@@ -71,23 +72,23 @@ export const AboutUs = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative min-h-[520px] overflow-hidden rounded-xl border border-white/8 bg-[#141414] px-6 pt-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:px-8 lg:col-span-6 lg:px-10"
+            className="relative h-[400px] overflow-hidden rounded-xl border border-white/8 bg-[#141414] px-6 pt-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:px-8 lg:col-span-5 lg:px-10 flex flex-col"
           >
-            <div className="pointer-events-none absolute inset-x-[12%] top-10 h-24 rounded-full bg-white/5 blur-[90px]" />
-            <div className="relative z-10 flex flex-col items-center gap-3 text-center">
-              <h3 className="max-w-[14ch] text-[clamp(1.9rem,2.8vw,3rem)] leading-[1.04] tracking-[-0.08em] text-[#f3efe7]">
-                Based in Los Angeles, California
+            <div className="pointer-events-none absolute inset-x-[12%] top-10 h-24 rounded-full bg-brand-orange/5 blur-[50px]" />
+            <div className="relative z-10 flex flex-col items-center gap-2 text-center">
+              <h3 className="text-[20px] md:text-[22px] tracking-tight text-[#f3efe7]">
+                Based in Quebec, Canada
               </h3>
-              <div className="flex items-center gap-3">
-                <div className="relative flex h-4 w-4 items-center justify-center">
-                  <div className="absolute h-full w-full animate-ping rounded-full bg-[#71f15e] opacity-75" />
-                  <div className="relative h-2.5 w-2.5 rounded-full bg-[#71f15e] shadow-[0_0_18px_rgba(113,241,94,1)]" />
+              <div className="flex items-center gap-2 mt-1">
+                <div className="relative flex h-2 w-2 items-center justify-center">
+                  <div className="absolute h-full w-full animate-[availability-pulse_3s_ease-out_infinite] rounded-full bg-[#71f15e] opacity-75" />
+                  <div className="relative h-1.5 w-1.5 rounded-full bg-[#71f15e] shadow-[0_0_12px_rgba(113,241,94,1)]" />
                 </div>
-                <span className="font-mono text-[11px] uppercase tracking-[0.32em] text-white/62">Available Worldwide</span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/50">Available Worldwide</span>
               </div>
             </div>
-            <div className="relative mt-8 w-[135%] max-w-none md:mt-10 lg:mt-2">
-              <LocationGlobe markerLabel="Wireframe globe centered on North America with Los Angeles highlighted" />
+            <div className="relative mt-auto w-[160%] max-w-none md:w-[130%] lg:w-[140%] self-center translate-y-[28%]">
+              <LocationGlobe markerLabel="Wireframe globe centered on North America with Quebec highlighted" />
             </div>
           </motion.div>
         </div>

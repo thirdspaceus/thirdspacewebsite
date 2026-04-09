@@ -29,16 +29,16 @@ export const LocationGlobe = ({ markerLabel = "Interactive 3D Globe" }: Location
       width: width * 2,
       height: width * 2,
       phi: 0,
-      theta: 0.15,
+      theta: 0.25,
       dark: 1, 
       diffuse: 1.2,
-      mapSamples: 16000,
-      mapBrightness: 6,
-      baseColor: [0.067, 0.067, 0.067], // #111 Base
+      mapSamples: 24000,
+      mapBrightness: 9,
+      baseColor: [0.55, 0.55, 0.55], // Bright wireframe dots
       markerColor: [0.443, 0.945, 0.369], // #71f15e location marker
-      glowColor: [0.043, 0.043, 0.043], 
+      glowColor: [0.05, 0.05, 0.05], 
       markers: [
-        { location: [34.0522, -118.2437], size: 0.08 } // LA Coordinates
+        { location: [46.8139, -71.2080], size: 0.08 } // Quebec Coordinates
       ],
       onRender: (state) => {
         if (pointerInteracting.current === null) {
