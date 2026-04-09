@@ -88,7 +88,7 @@ export const AboutUs = () => {
               </div>
             </div>
             
-            <div className="absolute left-1/2 bottom-[-10%] md:bottom-[-15%] z-10 w-[120%] md:w-[100%] lg:w-[110%] -translate-x-1/2 pointer-events-auto">
+            <div className="absolute left-1/2 top-[30%] md:top-[35%] z-[5] w-[110%] md:w-[95%] lg:w-[100%] max-w-[500px] -translate-x-1/2 pointer-events-auto">
               <LocationGlobe markerLabel="Wireframe globe centered on North America with Los Angeles highlighted" />
             </div>
           </motion.div>
