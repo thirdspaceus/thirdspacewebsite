@@ -27,8 +27,8 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-brand-beige px-3 pb-3 pt-[84px] md:px-5 md:pt-[108px] md:pb-5">
-      <div className="relative flex min-h-[780px] w-full overflow-hidden rounded-[28px] bg-brand-dark shadow-[0_26px_90px_rgba(20,20,20,0.18)] md:min-h-[95vh]">
+    <section className="relative overflow-hidden bg-brand-beige p-2 md:p-3 h-[100svh] min-h-[600px] flex flex-col">
+      <div className="relative flex flex-1 w-full overflow-hidden rounded-[20px] bg-[#060403] shadow-[0_26px_90px_rgba(20,20,20,0.18)]">
         <div className="absolute inset-0 z-0 bg-[#060403]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_65%,rgba(224,90,30,0.95)_0%,rgba(168,36,10,0.85)_25%,rgba(50,8,4,0.7)_55%,rgba(6,4,3,0.98)_85%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0)_50%)]" />
@@ -51,7 +51,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-20 flex h-full min-h-[780px] w-full flex-col justify-center px-8 md:min-h-[95vh] md:px-16 lg:px-24"
+          className="relative z-20 flex h-full w-full flex-col justify-center px-8 pt-16 md:px-16 lg:px-24"
         >
           <div className="max-w-[900px]">
             <motion.div variants={itemVariants} className="mb-8 flex items-center gap-2">
