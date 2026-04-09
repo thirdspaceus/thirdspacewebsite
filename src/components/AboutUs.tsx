@@ -20,8 +20,8 @@ const tools = [
 
 export const AboutUs = () => {
   return (
-    <section id="about-us" className="py-32 bg-brand-dark px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section id="about-us" className="py-32 bg-brand-dark overflow-hidden">
+      <div className="w-full px-11 md:px-[52px] lg:px-[68px]">
         <div className="flex items-center gap-3 mb-12">
           <span className="text-brand-grey font-mono text-[10px] uppercase tracking-widest text-white/50">( About Us )</span>
           <div className="w-4 h-px bg-white/20" />
@@ -69,21 +69,18 @@ export const AboutUs = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 bg-[#0a0a0a] border border-white/5 rounded-2xl flex flex-col justify-between relative overflow-hidden"
-            style={{ minHeight: '400px' }}
+            className="lg:col-span-5 bg-[#111] border border-white/5 rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden"
           >
-            <div className="relative z-10 flex flex-col items-center justify-start text-center pt-10 px-8">
-              <h3 className="text-2xl font-medium text-brand-offwhite mb-2">Based in Los Angeles, California</h3>
+            <div className="relative z-10">
+              <h3 className="text-xl font-medium text-brand-offwhite mb-4">Based in Los Angeles, California</h3>
               <div className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 bg-[#4ade80] rounded-full shadow-[0_0_15px_rgba(74,222,128,0.6)] animate-pulse" />
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#a3a3a3]">Available Worldwide</span>
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <span className="text-[10px] font-mono uppercase tracking-widest text-brand-grey">Available Worldwide</span>
               </div>
             </div>
-            
-            {/* World Map Background Image */}
-            <div className="absolute top-[35%] md:top-[30%] left-[-5%] right-[-5%] bottom-[-20%] z-0 pointer-events-none opacity-[0.85] mix-blend-screen scale-[1.15]">
-               <img src="/globe.png" alt="World Map Globe" className="w-full h-full object-cover object-top" />
-               <div className="absolute inset-0 bg-gradient-to-t from-transparent via-[#0a0a0a]/50 to-[#0a0a0a] z-10" />
+            {/* World Map Placeholder */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+               <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-orange/20 via-transparent to-transparent" />
             </div>
           </motion.div>
         </div>
