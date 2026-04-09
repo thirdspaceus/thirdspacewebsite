@@ -43,10 +43,9 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           className="absolute bottom-[-5%] right-[-5%] w-[120%] md:w-full max-w-4xl z-10 pointer-events-none"
         >
           <img 
-            src="https://framerusercontent.com/images/WLlehktco1TfNksSpRJQdyFeN5M.webp" 
-            alt="Motion Element" 
+            src="/hero-graphic.png" 
+            alt="ThirdSpace Graphic" 
             className="w-full h-auto object-contain translate-y-[10%] translate-x-[5%]"
-            referrerPolicy="no-referrer"
           />
         </motion.div>
 
