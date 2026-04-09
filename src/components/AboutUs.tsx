@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { InteractiveWireframeGlobe } from './InteractiveWireframeGlobe';
 
 const stats = [
   { label: 'Years of Experience', value: '13+' },
@@ -69,18 +70,21 @@ export const AboutUs = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 bg-[#111] border border-white/5 rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden"
+            className="lg:col-span-5 relative isolate overflow-hidden rounded-[2rem] border border-white/10 bg-[#080808] px-6 pt-8 md:px-8 md:pt-9"
           >
-            <div className="relative z-10">
-              <h3 className="text-xl font-medium text-brand-offwhite mb-4">Based in Quebec, Canada</h3>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-[10px] font-mono uppercase tracking-widest text-brand-grey">Available Worldwide</span>
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_18%,rgba(255,106,55,0.18),transparent_28%),radial-gradient(circle_at_74%_88%,rgba(255,255,255,0.05),transparent_30%)]" />
+            <div className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:72px_72px]" />
+            <div className="relative z-10 mx-auto flex max-w-md flex-col items-center text-center">
+              <h3 className="text-2xl font-medium tracking-tight text-brand-offwhite md:text-[2rem]">Based in Saint-Sauveur, Canada</h3>
+              <div className="mt-3 flex items-center justify-center gap-3">
+                <span className="globe-availability-dot" aria-hidden="true" />
+                <span className="text-[10px] font-mono uppercase tracking-[0.28em] text-white/55">Available Worldwide</span>
               </div>
+              <p className="mt-4 text-[10px] font-mono uppercase tracking-[0.24em] text-white/28">Fully interactive. Drag to explore.</p>
             </div>
-            {/* World Map Placeholder */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
-               <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-orange/20 via-transparent to-transparent" />
+
+            <div className="relative z-10 mt-6 h-[340px] md:mt-8 md:h-[430px]">
+              <InteractiveWireframeGlobe />
             </div>
           </motion.div>
         </div>
