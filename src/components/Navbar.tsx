@@ -36,10 +36,9 @@ export const Navbar = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
         <div className="flex items-center gap-8">
           <a href="/" className="flex items-center gap-2">
             <img 
-              src="https://framerusercontent.com/images/6C6SkLHoYirr9jR1KrYBlH0qsA.png" 
-              alt="Stōkt Logo" 
+              src="/logo.png" 
+              alt="ThirdSpace Logo" 
               className="h-6 md:h-8 invert brightness-0"
-              referrerPolicy="no-referrer"
             />
           </a>
         </div>

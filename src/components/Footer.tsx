@@ -38,10 +38,9 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-4 flex flex-col gap-8">
             <img 
-              src="https://framerusercontent.com/images/6C6SkLHoYirr9jR1KrYBlH0qsA.png" 
-              alt="Stōkt Logo" 
+              src="/logo.png" 
+              alt="ThirdSpace Logo" 
               className="h-10 w-fit invert brightness-0"
-              referrerPolicy="no-referrer"
             />
             <div className="flex flex-col gap-2">
               <p className="text-brand-grey text-sm">Saint-Sauveur — Canada</p>
