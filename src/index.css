@@ -52,14 +52,28 @@
   }
 }
 
-@keyframes globe-pulse {
+@keyframes marker-breathe {
   0%, 100% {
-    transform: scale(0.96);
-    opacity: 0.9;
+    transform: scale(0.92);
+    opacity: 0.82;
   }
 
   50% {
-    transform: scale(1.08);
+    transform: scale(1.12);
     opacity: 1;
+  }
+}
+
+@keyframes availability-pulse {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.82;
+    box-shadow: 0 0 0 0 rgba(113, 241, 94, 0.26);
+  }
+
+  55% {
+    transform: scale(1.12);
+    opacity: 1;
+    box-shadow: 0 0 0 10px rgba(113, 241, 94, 0);
   }
 }
