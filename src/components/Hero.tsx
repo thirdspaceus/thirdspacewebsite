@@ -64,14 +64,13 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-[6.5rem] font-medium tracking-tighter text-brand-offwhite leading-[0.9] -ml-1"
           >
-            MOVING <br />
-            BRANDS <br />
-            FORWARD
+            Let's Take <br />
+            Space Together
           </motion.h1>
 
-          <motion.div variants={itemVariants} className="max-w-sm">
-            <p className="text-brand-grey text-xs md:text-sm leading-relaxed">
-              ThirdSpace builds motion-driven brand systems, unifying branding, web, and motion into a single evolving execution.
+          <motion.div variants={itemVariants} className="max-w-xl">
+            <p className="text-brand-grey text-sm md:text-base leading-relaxed">
+              We empower businesses by delivering innovative, data-driven strategies tailored to their unique goals. From crafting a strong brand identity to implementing high-impact digital marketing solutions, our team is dedicated to helping you establish a compelling presence in the digital space.
             </p>
           </motion.div>
 
