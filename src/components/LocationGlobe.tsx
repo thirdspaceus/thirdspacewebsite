@@ -66,8 +66,6 @@ export const LocationGlobe = ({ markerLabel }: LocationGlobeProps) => {
       className="w-full h-full min-h-[400px] flex justify-center items-center cursor-grab active:cursor-grabbing"
       aria-label={markerLabel}
     >
-      <div className="pointer-events-none absolute inset-x-[14%] top-[10%] h-20 rounded-full bg-white/5 blur-[80px]" />
-      
       {dimensions.width > 0 && coreMaterial && (
         <Globe
           ref={globeEl}
@@ -75,8 +73,8 @@ export const LocationGlobe = ({ markerLabel }: LocationGlobeProps) => {
           height={dimensions.height}
           backgroundColor="rgba(0,0,0,0)"
           showAtmosphere={true}
-          atmosphereColor="#ffffff"
-          atmosphereAltitude={0.15}
+          atmosphereColor="#111111"
+          atmosphereAltitude={0.02}
           showGlobe={true}
           globeMaterial={coreMaterial}
           // Country polygon rendering
