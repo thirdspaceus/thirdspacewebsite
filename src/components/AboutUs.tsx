@@ -79,7 +79,10 @@ export const AboutUs = () => {
                 Based in Los Angeles, California
               </h3>
               <div className="flex items-center gap-3">
-                <div className="h-4 w-4 rounded-full bg-[#71f15e] shadow-[0_0_18px_rgba(113,241,94,0.8)] animate-[availability-pulse_1.9s_ease-in-out_infinite]" />
+                <div className="relative flex h-4 w-4 items-center justify-center">
+                  <div className="absolute h-full w-full animate-ping rounded-full bg-[#71f15e] opacity-75" />
+                  <div className="relative h-2.5 w-2.5 rounded-full bg-[#71f15e] shadow-[0_0_18px_rgba(113,241,94,1)]" />
+                </div>
                 <span className="font-mono text-[11px] uppercase tracking-[0.32em] text-white/62">Available Worldwide</span>
               </div>
             </div>
