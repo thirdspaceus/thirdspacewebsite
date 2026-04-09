@@ -22,20 +22,18 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="relative mx-3 mt-6 overflow-hidden rounded-[28px] rounded-b-none bg-brand-dark pb-16 pt-28 md:mx-5 lg:mx-6">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_50%_0%,rgba(179,39,44,0.24)_0%,rgba(179,39,44,0)_72%)]" />
+    <section id="services" className="relative mx-3 mt-6 overflow-hidden rounded-xl rounded-b-none bg-brand-dark pb-16 pt-28 md:mx-5 lg:mx-6">
       <div className="w-full px-8 md:px-[52px] lg:px-[68px]">
         <div className="mb-20 flex flex-col gap-12">
           <div className="flex items-center gap-3">
             <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/52">[ Services & Expertise ]</span>
             <ArrowDown size={12} className="text-white/38" />
           </div>
-
-          <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-2">
-            <h2 className="text-[clamp(3rem,6vw,5.6rem)] leading-[0.92] tracking-[-0.08em] text-brand-offwhite">
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-medium leading-[0.92] tracking-[-0.05em] text-brand-offwhite">
               Digital Design Powerhouse
             </h2>
-            <p className="max-w-md text-sm leading-relaxed text-white/62 md:text-base">
+            <p className="max-w-xl text-[13px] leading-relaxed text-white/50 md:text-[14px]">
               Over the last decade, we&apos;ve refined a wide range of digital skills, offering services mastered to feel sharp, modern, and always driven by the purpose of motion.
             </p>
           </div>
