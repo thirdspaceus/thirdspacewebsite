@@ -33,7 +33,12 @@ const services = [
 ];
 
 export const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleSelection = (index: number) => {
+    // If they click the active one, optionally close it back to default view
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <section id="services" className="relative mx-3 mt-6 overflow-hidden rounded-xl rounded-b-none bg-[#141414] pb-16 pt-12 md:mx-5 lg:mx-6 md:pt-16">
@@ -53,25 +58,46 @@ export const Services = () => {
           </div>
         </div>
 
-        {/* Dynamic Accordion Wrapper */}
-        <div className="flex flex-col md:flex-row w-full h-[650px] md:h-[520px] gap-4 md:gap-5">
+        {/* Dynamic Accordion Tri-State Wrapper */}
+        <div className="flex flex-col md:flex-row w-full h-[650px] md:h-[580px] gap-4 md:gap-5">
           {services.map((service, index) => {
             const isActive = activeIndex === index;
+            const isDefault = activeIndex === null;
             
             return (
               <div
                 key={service.title}
-                onClick={() => setActiveIndex(index)}
-                className={`group relative overflow-hidden rounded-xl border border-white/5 bg-[#0a0a0a] cursor-pointer transition-all duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-white/10 ${
-                  isActive 
-                    ? "flex-[1_0_100%] md:flex-[9] h-full shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]" 
-                    : "flex-[0_0_70px] md:flex-[1] h-[70px] md:h-full"
+                onClick={() => handleSelection(index)}
+                className={`group relative overflow-hidden rounded-xl border border-white/5 bg-[#080808] cursor-pointer transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-white/10 ${
+                  isDefault
+                    ? "flex-1 h-full"
+                    : isActive 
+                      ? "flex-[1_0_100%] md:flex-[10] h-full shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]" 
+                      : "flex-[0_0_70px] md:flex-[0_0_80px] lg:flex-[0_0_90px] h-[70px] md:h-full"
                 }`}
               >
-                {/* INACTIVE STATE - Titles */}
+                {/* DEFAULT STATE - 3 Equal Panels */}
+                <div 
+                  className={`absolute inset-0 flex flex-col p-8 transition-opacity duration-500 ${
+                    isDefault ? "opacity-100 delay-[300ms]" : "opacity-0 pointer-events-none"
+                  }`}
+                >
+                  <div className="flex-1 w-full h-full relative flex items-center justify-center pb-8">
+                     <img 
+                       src={service.image} 
+                       alt={service.title}
+                       className="w-[85%] md:w-[75%] max-h-[75%] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-transform duration-[800ms] ease-out group-hover:scale-105" 
+                     />
+                  </div>
+                  <h3 className="text-[17px] tracking-tight text-white/90 absolute bottom-6 left-6 md:bottom-8 md:left-8">
+                    {service.title}
+                  </h3>
+                </div>
+
+                {/* INACTIVE/COLLAPSED STATE - Vertical Strip */}
                 <div 
                   className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 md:delay-100 ${
-                    isActive ? "opacity-0 pointer-events-none" : "opacity-100"
+                    !isDefault && !isActive ? "opacity-100" : "opacity-0 pointer-events-none"
                   }`}
                 >
                   <span className="md:-rotate-90 whitespace-nowrap text-brand-offwhite font-heading text-[15px] md:text-[17px] tracking-tight opacity-40 transition-opacity duration-300 group-hover:opacity-100">
@@ -79,14 +105,14 @@ export const Services = () => {
                   </span>
                 </div>
 
-                {/* ACTIVE STATE */}
+                {/* ACTIVE/EXPANDED STATE - Detailed Reveal */}
                 <div 
-                  className={`absolute inset-0 flex flex-col md:flex-row items-center transition-opacity duration-500 delay-[250ms] ${
-                    isActive ? "opacity-100" : "opacity-0 pointer-events-none"
+                  className={`absolute inset-0 flex flex-col md:flex-row items-center transition-opacity duration-500 ${
+                    isActive ? "opacity-100 delay-[300ms]" : "opacity-0 pointer-events-none"
                   }`}
                 >
-                  {/* Left Content Context */}
-                  <div className="relative z-20 flex-1 flex flex-col justify-center p-8 md:p-12 lg:p-[4rem] h-full order-2 md:order-1 overflow-y-auto no-scrollbar w-full md:max-w-[70%] lg:max-w-[65%]">
+                  {/* Left Content Context - Fixed width container prevents text wrap squishing! */}
+                  <div className="relative z-20 flex-shrink-0 flex flex-col justify-center p-8 md:p-12 lg:p-[4rem] h-full order-2 md:order-1 overflow-y-auto no-scrollbar w-full md:w-[480px] lg:w-[600px]">
                     <h3 className="text-2xl md:text-[1.8rem] lg:text-[2.2rem] leading-[1] tracking-[-0.04em] text-brand-offwhite mb-3 md:mb-4">
                       {service.title}
                     </h3>
@@ -106,7 +132,7 @@ export const Services = () => {
 
                   {/* Right Graphical Overlay */}
                   <div className="relative z-10 w-full h-[40%] md:flex-1 md:h-full md:absolute right-0 top-0 order-1 md:order-2 flex items-center justify-center pointer-events-none p-6 md:p-0">
-                    <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent z-10 w-1/3 left-0" />
+                    <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#080808] via-[#080808]/70 to-transparent z-10 w-1/3 left-0" />
                     <img 
                       src={service.image} 
                       alt={service.title}
