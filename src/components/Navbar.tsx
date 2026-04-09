@@ -24,7 +24,7 @@ export const Navbar = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
   ];
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-8 pointer-events-none w-full">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-8 pointer-events-none">
       <div 
         className={cn(
           "flex items-center justify-between w-full px-4 py-3 md:px-6 md:py-4 lg:px-4 rounded-xl transition-all duration-500 pointer-events-auto",
