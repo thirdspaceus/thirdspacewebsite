@@ -32,7 +32,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
         {/* Background Image/Video Placeholder */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#080607]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_56%_88%,_#f0a160_0%,_#d96c3a_18%,_#b3272c_42%,_#730f21_68%,_rgba(20,20,20,0.98)_100%)] opacity-95" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_56%_88%,_#e5925f_0%,_#cd5933_16%,_#b3272c_38%,_#730f21_68%,_rgba(20,20,20,0.98)_100%)] opacity-95" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_40%,_rgba(179,39,44,0.42)_0%,_rgba(115,15,33,0.12)_38%,_rgba(8,6,7,0)_65%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_8%_24%,_rgba(0,0,0,0.94)_0%,_rgba(0,0,0,0.84)_24%,_rgba(0,0,0,0.18)_48%,_rgba(0,0,0,0)_66%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_95%_12%,_rgba(0,0,0,0.82)_0%,_rgba(0,0,0,0.45)_22%,_rgba(0,0,0,0)_46%)]" />
@@ -74,19 +74,19 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           </motion.h1>
 
           <motion.div variants={itemVariants} className="max-w-xl">
-            <p className="text-brand-grey text-sm md:text-base leading-relaxed">
+            <p className="text-[#f2f2f0]/72 text-sm md:text-base leading-relaxed">
               We empower businesses by delivering innovative, data-driven strategies tailored to their unique goals. From crafting a strong brand identity to implementing high-impact digital marketing solutions, our team is dedicated to helping you establish a compelling presence in the digital space.
             </p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-2">
-            <button className="flex items-center gap-2 bg-white text-brand-dark px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange hover:text-white transition-all duration-300">
+            <button className="flex items-center gap-2 bg-brand-orange text-white px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange-deep transition-all duration-300 shadow-[0_14px_34px_rgba(179,39,44,0.26)]">
               <span>View Projects</span>
               <ArrowRight size={12} />
             </button>
             <button 
               onClick={onOpenQuote}
-              className="flex items-center gap-2 bg-brand-dark text-white px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange transition-all duration-300 border border-white/10"
+              className="flex items-center gap-2 bg-brand-dark/82 text-white px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange transition-all duration-300 border border-brand-orange/40"
             >
               <span>Get a quote</span>
               <ArrowRight size={12} />

@@ -32,7 +32,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-brand-dark px-8 lg:px-12 pt-16 pb-8 md:pt-24 min-h-[50vh] flex flex-col justify-between">
+    <footer className="bg-[linear-gradient(180deg,#141414_0%,#251214_38%,#141414_100%)] px-8 lg:px-12 pt-16 pb-8 md:pt-24 min-h-[50vh] flex flex-col justify-between border-t border-brand-orange/20">
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Brand Info */}

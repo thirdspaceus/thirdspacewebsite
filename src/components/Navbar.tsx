@@ -63,7 +63,7 @@ export const Navbar = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           
           <button 
             onClick={onOpenQuote}
-            className="group flex items-center gap-2 bg-brand-beige text-brand-dark px-4 py-2 rounded-lg font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange hover:text-white transition-all duration-300"
+            className="group flex items-center gap-2 bg-brand-orange text-white px-4 py-2 rounded-lg font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange-deep transition-all duration-300 shadow-[0_10px_30px_rgba(179,39,44,0.25)]"
           >
             <span>Get an estimate</span>
             <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
