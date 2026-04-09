@@ -39,16 +39,16 @@ const testimonials = [
 
 const marqueeTestimonials = [...testimonials, ...testimonials];
 const cardOffsets = [
-  'mt-48 md:mt-64',
-  '-mt-8 md:-mt-12',
+  'mt-16 md:mt-20',
+  '-mt-2 md:-mt-4',
   'mt-24 md:mt-32',
-  'mt-56 md:mt-[380px]',
+  'mt-6 md:mt-8',
 ];
 const cardWidths = [
-  'w-[280px] md:w-[316px]',
-  'w-[290px] md:w-[328px]',
-  'w-[285px] md:w-[320px]',
-  'w-[275px] md:w-[310px]',
+  'w-[308px] md:w-[380px]',
+  'w-[360px] md:w-[420px]',
+  'w-[336px] md:w-[390px]',
+  'w-[324px] md:w-[385px]',
 ];
 
 export const Testimonials = () => {
@@ -84,14 +84,14 @@ export const Testimonials = () => {
         className="relative left-1/2 w-screen -translate-x-1/2"
       >
         <div className="group/testimonial overflow-hidden">
-          <div className="flex w-max gap-5 [--testimonial-gap:1.25rem] [--testimonial-speed:40s] animate-[testimonial-marquee_var(--testimonial-speed)_linear_infinite] py-5 group-hover/testimonial:[animation-play-state:paused]">
+          <div className="flex w-max gap-6 [--testimonial-gap:1.5rem] [--testimonial-speed:40s] animate-[testimonial-marquee_var(--testimonial-speed)_linear_infinite] py-10 group-hover/testimonial:[animation-play-state:paused]">
             {marqueeTestimonials.map((testimonial, index) => (
               <article
                 key={`${testimonial.name}-${index}`}
                 className={`group/card relative shrink-0 rounded-2xl border border-black/5 bg-[#090909] px-7 py-8 text-brand-offwhite shadow-lg transition-colors duration-500 hover:bg-brand-orange hover:border-brand-orange ${cardWidths[index % cardWidths.length]} ${cardOffsets[index % cardOffsets.length]}`}
               >
-                <div className="flex min-h-[200px] flex-col justify-between gap-8 md:min-h-[220px]">
-                  <p className="relative z-10 text-[13px] leading-[1.65] tracking-tight text-[#f2eee7] transition-colors duration-500 group-hover/card:text-white">
+                <div className="flex min-h-[200px] flex-col justify-between gap-8 md:min-h-[240px]">
+                  <p className="relative z-10 text-[13px] leading-[1.65] tracking-tight text-[#f2eee7] transition-colors duration-500 group-hover/card:text-white md:text-[14px]">
                     {testimonial.content}
                   </p>
 
