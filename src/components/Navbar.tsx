@@ -30,7 +30,7 @@ export const Navbar = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
         className={cn(
           'pointer-events-auto mx-auto flex w-full max-w-[2048px] items-center justify-between rounded-xl px-4 py-3 transition-all duration-500 md:px-7 md:py-5',
           isScrolled
-            ? 'bg-[#1b1918]/88 border border-white/8 shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur-xl'
+            ? 'bg-[#1b1918]/40 border border-white/10 shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur-3xl'
             : 'bg-transparent border-transparent'
         )}
       >

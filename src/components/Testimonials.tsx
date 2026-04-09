@@ -39,10 +39,10 @@ const testimonials = [
 
 const marqueeTestimonials = [...testimonials, ...testimonials];
 const cardOffsets = [
-  'mt-16 md:mt-24',
-  'mt-2 md:mt-4',
+  'mt-48 md:mt-64',
+  '-mt-8 md:-mt-12',
   'mt-24 md:mt-32',
-  'mt-8 md:mt-12',
+  'mt-56 md:mt-[380px]',
 ];
 const cardWidths = [
   'w-[280px] md:w-[316px]',
@@ -53,7 +53,7 @@ const cardWidths = [
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="overflow-hidden bg-brand-beige py-24 md:py-32">
+    <section id="testimonials" className="overflow-hidden bg-brand-beige py-32 md:py-48 flex flex-col items-center">
       <div className="w-full px-5 md:px-[52px] lg:px-[68px]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -83,8 +83,8 @@ export const Testimonials = () => {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="relative left-1/2 w-screen -translate-x-1/2"
       >
-        <div className="group/testimonial overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_7%,black_93%,transparent)]">
-          <div className="flex w-max gap-5 [--testimonial-gap:1.25rem] [--testimonial-speed:40s] animate-[testimonial-marquee_var(--testimonial-speed)_linear_infinite] py-5 group-hover/testimonial:[--testimonial-speed:110s]">
+        <div className="group/testimonial overflow-hidden">
+          <div className="flex w-max gap-5 [--testimonial-gap:1.25rem] [--testimonial-speed:40s] animate-[testimonial-marquee_var(--testimonial-speed)_linear_infinite] py-5 group-hover/testimonial:[animation-play-state:paused]">
             {marqueeTestimonials.map((testimonial, index) => (
               <article
                 key={`${testimonial.name}-${index}`}
