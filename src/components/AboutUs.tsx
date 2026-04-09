@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { LocationGlobe } from './LocationGlobe';
 
 const stats = [
   { label: 'Years of Experience', value: '13+' },
@@ -71,7 +72,7 @@ export const AboutUs = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="lg:col-span-6 bg-[#111] border border-white/5 rounded-2xl p-8 flex flex-col items-center relative overflow-hidden"
+            className="lg:col-span-6 bg-[#111] border border-white/5 rounded-2xl px-8 pt-8 flex flex-col items-center relative overflow-hidden min-h-[420px]"
           >
             <div className="relative z-10 flex flex-col items-center gap-2 mt-4">
                <h3 className="text-[13px] font-medium tracking-widest text-[#e8e4db] mb-0 font-sans">Based in Los Angeles, California</h3>
@@ -80,9 +81,8 @@ export const AboutUs = () => {
                  <span className="text-[10px] font-mono uppercase tracking-widest text-brand-grey">Available Worldwide</span>
                </div>
             </div>
-            {/* World Map Placeholder */}
-            <div className="absolute bottom-[-15%] w-full flex justify-center pointer-events-none">
-               <img src="/images/wireframe_globe.png" alt="World Map Globe" className="w-[85%] h-auto object-contain mix-blend-screen" />
+            <div className="relative mt-12 -mb-16 w-[122%] max-w-none">
+              <LocationGlobe markerLabel="Wireframe globe centered on North America with Los Angeles highlighted" />
             </div>
           </motion.div>
           
