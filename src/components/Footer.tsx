@@ -39,7 +39,7 @@ export const Footer = () => {
           <div className="lg:col-span-4 flex flex-col gap-6">
             <h2 className="text-3xl md:text-4xl text-brand-offwhite font-medium tracking-tight">ThirdSpace</h2>
             <div className="flex flex-col gap-2">
-              <p className="text-brand-grey text-sm">Saint-Sauveur — Canada</p>
+              <p className="text-brand-grey text-sm">Los Angeles, California</p>
               <a href="mailto:hello@thirdspace.com" className="text-brand-grey hover:text-brand-orange transition-colors text-sm">
                 hello@thirdspace.com
               </a>
