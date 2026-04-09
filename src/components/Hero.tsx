@@ -54,7 +54,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-start gap-6 md:gap-8 translate-y-[-5%]"
+          className="relative z-20 w-full px-8 lg:px-12 flex flex-col items-start gap-6 md:gap-8 translate-y-[-5%]"
         >
           <motion.div variants={itemVariants} className="flex items-center gap-2">
             <span className="text-brand-offwhite font-mono text-[10px] uppercase tracking-widest">[ We are ThirdSpace ]</span>

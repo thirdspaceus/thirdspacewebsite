@@ -27,7 +27,7 @@ export const Navbar = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-8 pointer-events-none">
       <div 
         className={cn(
-          "flex items-center justify-between w-full max-w-7xl px-4 py-3 md:px-6 md:py-4 rounded-xl transition-all duration-500 pointer-events-auto",
+          "flex items-center justify-between w-full px-4 py-3 md:px-6 md:py-4 lg:px-4 rounded-xl transition-all duration-500 pointer-events-auto",
           isScrolled 
             ? "bg-brand-dark/50 backdrop-blur-xl border border-white/10 shadow-2xl" 
             : "bg-transparent"
