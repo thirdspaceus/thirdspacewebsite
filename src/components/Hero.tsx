@@ -31,8 +31,13 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
       <div className="relative w-full h-full min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] bg-brand-dark rounded-xl overflow-hidden flex items-center justify-center shadow-lg">
         {/* Background Image/Video Placeholder */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_75%,_#b3272c_0%,_#730f21_46%,_#141414_100%)] opacity-100" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#141414]/60 via-transparent to-[#141414] opacity-90" />
+          <div className="absolute inset-0 bg-[#080607]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_56%_88%,_#f0a160_0%,_#d96c3a_18%,_#b3272c_42%,_#730f21_68%,_rgba(20,20,20,0.98)_100%)] opacity-95" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_40%,_rgba(179,39,44,0.42)_0%,_rgba(115,15,33,0.12)_38%,_rgba(8,6,7,0)_65%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_8%_24%,_rgba(0,0,0,0.94)_0%,_rgba(0,0,0,0.84)_24%,_rgba(0,0,0,0.18)_48%,_rgba(0,0,0,0)_66%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_95%_12%,_rgba(0,0,0,0.82)_0%,_rgba(0,0,0,0.45)_22%,_rgba(0,0,0,0)_46%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.62)_0%,rgba(0,0,0,0.18)_24%,rgba(0,0,0,0.02)_48%,rgba(0,0,0,0.34)_78%,rgba(0,0,0,0.76)_100%)]" />
+          <div className="absolute inset-x-0 bottom-[-14%] h-[38%] bg-[radial-gradient(circle_at_50%_0%,_rgba(242,242,240,0.28)_0%,_rgba(242,242,240,0.08)_28%,_rgba(242,242,240,0)_72%)] blur-2xl" />
         </div>
 
         {/* 3D Motion Element Placeholder */}
