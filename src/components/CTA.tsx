@@ -4,8 +4,8 @@ import { ArrowRight } from 'lucide-react';
 
 export const CTA = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
   return (
-    <section id="cta" className="py-40 bg-brand-beige px-4 md:px-8 text-center overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col items-center gap-12">
+    <section id="cta" className="py-40 bg-brand-beige text-center overflow-hidden">
+      <div className="w-full px-11 md:px-[52px] lg:px-[68px] flex flex-col items-center gap-12">
         <div className="flex items-center gap-3">
           <div className="w-4 h-px bg-brand-grey/30" />
           <span className="text-brand-grey font-mono text-[10px] uppercase tracking-widest">( Seriously )</span>

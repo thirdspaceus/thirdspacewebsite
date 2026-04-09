@@ -25,8 +25,8 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-32 bg-brand-dark px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="py-32 bg-brand-dark">
+      <div className="w-full px-11 md:px-[52px] lg:px-[68px]">
         <div className="flex flex-col gap-12 mb-24">
           <div className="flex items-center gap-3">
             <span className="text-brand-grey font-mono text-[10px] uppercase tracking-widest text-white/50">( Services & Expertise )</span>

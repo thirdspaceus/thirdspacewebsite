@@ -52,8 +52,8 @@ const pricingPlans = [
 
 export const Pricing = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
   return (
-    <section id="pricing" className="py-32 bg-brand-beige px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="pricing" className="py-32 bg-brand-beige">
+      <div className="w-full px-11 md:px-[52px] lg:px-[68px]">
         <div className="flex flex-col gap-12 mb-20">
           <div className="flex items-center gap-3">
             <span className="text-brand-grey font-mono text-[10px] uppercase tracking-widest">( Investment )</span>

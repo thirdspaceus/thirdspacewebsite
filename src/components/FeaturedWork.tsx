@@ -107,8 +107,8 @@ const ProjectCard = ({ project }: { project: typeof projects[0], key?: string })
 
 export const FeaturedWork = () => {
   return (
-    <section id="portfolio" className="py-32 bg-brand-beige px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="portfolio" className="py-32 bg-brand-beige">
+      <div className="w-full px-11 md:px-[52px] lg:px-[68px]">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">

@@ -31,8 +31,8 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-32 bg-brand-beige px-4 md:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-32 bg-brand-beige overflow-hidden">
+      <div className="w-full px-11 md:px-[52px] lg:px-[68px]">
         <div className="flex flex-col gap-12 mb-24 items-center text-center">
           <div className="flex items-center gap-3">
             <span className="text-brand-grey font-mono text-[10px] uppercase tracking-widest">( Testimonials )</span>
