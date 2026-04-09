@@ -38,7 +38,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           initial={{ y: 100, opacity: 0, scale: 0.9 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="pointer-events-none absolute bottom-[-10%] right-[-14%] z-10 w-[140%] min-w-[700px] max-w-[1400px] md:bottom-[0%] md:right-[-10%] md:w-[80%]"
+          className="pointer-events-none absolute bottom-[0%] right-[-10%] z-10 w-[110%] min-w-[500px] max-w-[900px] md:bottom-[5%] md:right-[0%] md:w-[60%] lg:w-[50%]"
         >
           <img
             src="/hero-graphic.png"
@@ -92,7 +92,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
         </motion.div>
 
         {/* Footer anchors */}
-        <div className="pointer-events-none absolute bottom-8 left-8 right-8 z-30 flex items-end justify-between font-sans text-xs text-white/60 md:bottom-10 md:left-16 md:right-16">
+        <div className="pointer-events-none absolute bottom-8 left-8 right-8 z-30 flex items-end justify-between font-sans text-xs text-white/60 md:bottom-10 md:left-16 md:right-16 lg:left-24 lg:right-24">
           <motion.a
             href="#portfolio"
             initial={{ opacity: 0 }}
