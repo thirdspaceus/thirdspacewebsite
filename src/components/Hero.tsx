@@ -28,7 +28,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
 
   return (
     <section className="relative overflow-hidden bg-brand-beige p-2 md:p-3 h-[100svh] min-h-[600px] flex flex-col">
-      <div className="relative flex flex-1 w-full overflow-hidden rounded-[20px] bg-[#060403] shadow-[0_26px_90px_rgba(20,20,20,0.18)]">
+      <div className="relative flex flex-1 w-full overflow-hidden rounded-xl bg-[#060403] shadow-[0_26px_90px_rgba(20,20,20,0.18)]">
         <div className="absolute inset-0 z-0 bg-[#060403]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_65%,rgba(224,90,30,0.95)_0%,rgba(168,36,10,0.85)_25%,rgba(50,8,4,0.7)_55%,rgba(6,4,3,0.98)_85%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0)_50%)]" />
@@ -51,7 +51,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-20 flex h-full w-full flex-col justify-center px-8 pt-16 md:px-16 lg:px-24"
+          className="relative z-20 flex h-full w-full flex-col justify-center px-5 pt-16 md:px-[36px]"
         >
           <div className="max-w-[900px]">
             <motion.div variants={itemVariants} className="mb-4 flex items-center gap-2">
@@ -92,7 +92,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
         </motion.div>
 
         {/* Footer anchors */}
-        <div className="pointer-events-none absolute bottom-8 left-8 right-8 z-30 flex items-end justify-between font-sans text-xs text-white/60 md:bottom-10 md:left-16 md:right-16 lg:left-24 lg:right-24">
+        <div className="pointer-events-none absolute bottom-8 z-30 flex w-full items-end justify-between px-5 font-sans text-xs text-white/60 md:bottom-10 md:px-[36px]">
           <motion.a
             href="#portfolio"
             initial={{ opacity: 0 }}
