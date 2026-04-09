@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Inter Tight", ui-monospace, SFMono-Regular, monospace;
 
-  --color-brand-beige: #f5f0e9;
-  --color-brand-dark: #0a0a0a;
-  --color-brand-orange: #ff6a37;
-  --color-brand-orange-deep: #ff4d1d;
+  --color-brand-beige: #f2f2f0;
+  --color-brand-dark: #141414;
+  --color-brand-orange: #ff6d28;
+  --color-brand-orange-deep: #b3272c;
   --color-brand-grey: #a3a3a3;
-  --color-brand-offwhite: #fafafa;
+  --color-brand-offwhite: #f2f2f0;
 }
 
 @layer base {
   body {
     @apply bg-brand-beige text-brand-dark font-sans antialiased selection:bg-brand-orange selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tighter;
   }
 
   .dark {

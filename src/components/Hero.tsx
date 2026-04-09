@@ -31,8 +31,8 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
       <div className="relative w-full h-full min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] bg-brand-dark rounded-[2rem] md:rounded-[2.5rem] overflow-hidden flex items-center justify-center shadow-lg">
         {/* Background Image/Video Placeholder */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_85%,_#ea580c_0%,_#9a3412_35%,_#000000_80%)] opacity-90" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_85%,_#ff6d28_0%,_#141414_80%)] opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#141414]/50 via-transparent to-[#141414]/80" />
         </div>
 
         {/* 3D Motion Element Placeholder */}
@@ -76,13 +76,13 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           </motion.div>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-2">
-            <button className="flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange hover:text-white transition-all duration-300">
+            <button className="flex items-center gap-2 bg-white text-brand-dark px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange hover:text-white transition-all duration-300">
               <span>View Projects</span>
               <ArrowRight size={12} />
             </button>
             <button 
               onClick={onOpenQuote}
-              className="flex items-center gap-2 bg-black text-white px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange transition-all duration-300 border border-white/10"
+              className="flex items-center gap-2 bg-brand-dark text-white px-6 py-2.5 rounded-[10px] font-mono text-[10px] uppercase tracking-wider hover:bg-brand-orange transition-all duration-300 border border-white/10"
             >
               <span>Get a quote</span>
               <ArrowRight size={12} />
