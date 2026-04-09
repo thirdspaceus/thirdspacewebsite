@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
 
@@ -7,23 +7,37 @@ const services = [
     title: 'Branding Identity',
     description: 'We design brands, systems, and experiences that feel intentional from the first tap to the last interaction.',
     image: 'https://framerusercontent.com/images/fsnxfPl4xnUJdyQSiOcHEYxg.png',
+    features: [
+      'Identity Branding', 'UI Design', 'Art Direction', 'Interactive Design', 
+      'UX Design / Research', 'UX Copywriting', 'Creative Direction'
+    ]
   },
   {
     title: 'Web Design & Dev',
-    description: 'High-performance websites built with a focus on motion, interaction, and conversion.',
+    description: 'We build fast, responsive, and future-ready digital products using modern tools and frameworks.',
     image: 'https://framerusercontent.com/images/o5rue2juXI7jXmJGLCQ0tEIHzw.png',
+    features: [
+      'Creative Development', 'CMS Building', 'E-Commerce', 
+      'Website Responsiveness', 'Web Application', 'AI Workflow Integration'
+    ]
   },
   {
     title: 'Motion Systems',
-    description: 'Bringing brands to life through fluid motion, 3D elements, and dynamic storytelling.',
+    description: 'We design bold, scalable visuals—built for impact, movement, and modern storytelling. Whether crafted by hand or powered by AI, these systems bring your brand to life.',
     image: 'https://framerusercontent.com/images/oxZu28Q6bOJFLSa6KzaVpa1ZuI.png',
+    features: [
+      '3D Design & Rendering', 'Custom Icon Systems', 'AI-Powered VFX', 
+      'Motion Design', 'AI-Generated Video', 'AI Imagery & Compositing'
+    ]
   }
 ];
 
 export const Services = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+
   return (
     <section id="services" className="relative mx-3 mt-6 overflow-hidden rounded-xl rounded-b-none bg-[#141414] pb-16 pt-12 md:mx-5 lg:mx-6 md:pt-16">
-      <div className="w-full px-8 md:px-[52px] lg:px-[68px]">
+      <div className="w-full px-5 md:px-[52px] lg:px-[68px]">
         <div className="mb-10 flex flex-col gap-6">
           <div className="flex items-center gap-3">
             <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/52">[ Services & Expertise ]</span>
@@ -39,33 +53,70 @@ export const Services = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="group relative flex flex-col justify-between gap-8 rounded-xl border border-white/8 bg-[#141414] p-6 transition-all duration-500 hover:border-brand-orange/30 hover:bg-[linear-gradient(180deg,rgba(255,90,0,0.06)_0%,rgba(20,20,20,1)_46%)] md:p-8"
-            >
-              <div className="flex aspect-[1.04] items-center justify-center overflow-hidden rounded-[14px] bg-black ring-1 ring-white/5">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+        {/* Dynamic Accordion Wrapper */}
+        <div className="flex flex-col md:flex-row w-full h-[650px] md:h-[520px] gap-4 md:gap-5">
+          {services.map((service, index) => {
+            const isActive = activeIndex === index;
+            
+            return (
+              <div
+                key={service.title}
+                onClick={() => setActiveIndex(index)}
+                className={`group relative overflow-hidden rounded-xl border border-white/5 bg-[#0a0a0a] cursor-pointer transition-all duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-white/10 ${
+                  isActive 
+                    ? "flex-[1_0_100%] md:flex-[9] h-full shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]" 
+                    : "flex-[0_0_70px] md:flex-[1] h-[70px] md:h-full"
+                }`}
+              >
+                {/* INACTIVE STATE - Titles */}
+                <div 
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 md:delay-100 ${
+                    isActive ? "opacity-0 pointer-events-none" : "opacity-100"
+                  }`}
+                >
+                  <span className="md:-rotate-90 whitespace-nowrap text-brand-offwhite font-heading text-[15px] md:text-[17px] tracking-tight opacity-40 transition-opacity duration-300 group-hover:opacity-100">
+                    {service.title}
+                  </span>
+                </div>
 
-              <div className="flex flex-col gap-3">
-                <h3 className="text-[1.7rem] leading-[1] tracking-[-0.05em] text-brand-offwhite">{service.title}</h3>
-                <p className="max-w-[26ch] text-sm leading-relaxed text-white/62">
-                  {service.description}
-                </p>
+                {/* ACTIVE STATE */}
+                <div 
+                  className={`absolute inset-0 flex flex-col md:flex-row items-center transition-opacity duration-500 delay-[250ms] ${
+                    isActive ? "opacity-100" : "opacity-0 pointer-events-none"
+                  }`}
+                >
+                  {/* Left Content Context */}
+                  <div className="relative z-20 flex-1 flex flex-col justify-center p-8 md:p-12 lg:p-[4rem] h-full order-2 md:order-1 overflow-y-auto no-scrollbar w-full md:max-w-[70%] lg:max-w-[65%]">
+                    <h3 className="text-2xl md:text-[1.8rem] lg:text-[2.2rem] leading-[1] tracking-[-0.04em] text-brand-offwhite mb-3 md:mb-4">
+                      {service.title}
+                    </h3>
+                    <p className="max-w-[48ch] text-[13px] md:text-[14px] leading-relaxed text-white/50 mb-10">
+                      {service.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                      {service.features.map(feat => (
+                        <div key={feat} className="flex items-center gap-3 text-[11px] md:text-[12px] text-white/50">
+                          <span className="text-white/20 text-[10px] mt-px">→</span>
+                          {feat}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right Graphical Overlay */}
+                  <div className="relative z-10 w-full h-[40%] md:flex-1 md:h-full md:absolute right-0 top-0 order-1 md:order-2 flex items-center justify-center pointer-events-none p-6 md:p-0">
+                    <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent z-10 w-1/3 left-0" />
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-[70%] max-w-[300px] md:max-w-none md:w-auto md:h-[80%] lg:h-[90%] object-contain md:absolute md:right-[-2%] md:top-1/2 md:-translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] saturate-[1.15]" 
+                    />
+                  </div>
+                </div>
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
