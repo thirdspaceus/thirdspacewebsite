@@ -4,9 +4,9 @@ import { ArrowDown, ArrowRight } from 'lucide-react';
 import { LocationGlobe } from './LocationGlobe';
 
 const stats = [
-  { label: 'Years of Experience', value: '13+' },
-  { label: 'Awards & Recognition', value: '15+' },
-  { label: 'Satisfied Clients', value: '350+' }
+  { label: 'Years of Experience', value: '10+' },
+  { label: 'Awards & Recognition', value: '10+' },
+  { label: 'Satisfied Clients', value: '60+' }
 ];
 
 const tools = [
