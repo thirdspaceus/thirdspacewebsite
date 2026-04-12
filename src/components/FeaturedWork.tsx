@@ -54,7 +54,7 @@ const projects = [
   }
 ];
 
-const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
+const ProjectCard: React.FC<{ project: (typeof projects)[number] }> = ({ project }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

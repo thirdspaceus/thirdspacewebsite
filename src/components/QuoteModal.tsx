@@ -8,25 +8,66 @@ interface QuoteModalProps {
   onClose: () => void;
 }
 
+const initialFormData = {
+  name: '',
+  email: '',
+  phone: '',
+  projectType: 'branding',
+  message: ''
+};
+
 export const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    projectType: 'branding',
-    budget: '5k-10k',
-    message: ''
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [formData, setFormData] = useState(initialFormData);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const resetModal = () => {
+    setFormData(initialFormData);
+    setSubmitError(null);
+    setIsSubmitted(false);
+  };
+
+  const handleClose = () => {
+    if (isSubmitting) {
+      return;
+    }
+
+    resetModal();
+    onClose();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      onClose();
-    }, 3000);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const payload = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(payload?.error || 'Something went wrong while sending your request.');
+      }
+
+      setIsSubmitted(true);
+      setFormData(initialFormData);
+      window.setTimeout(() => {
+        resetModal();
+        onClose();
+      }, 3000);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Something went wrong while sending your request.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,7 +79,7 @@ export const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={onClose}
+            onClick={handleClose}
             className="absolute inset-0 bg-brand-dark/80 backdrop-blur-sm"
           />
 
@@ -50,8 +91,12 @@ export const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
             className="relative w-full max-w-2xl bg-brand-beige rounded-3xl shadow-2xl overflow-hidden"
           >
             <button 
-              onClick={onClose}
-              className="absolute top-6 right-6 p-2 text-brand-dark/50 hover:text-brand-dark transition-colors z-10"
+              onClick={handleClose}
+              disabled={isSubmitting}
+              className={cn(
+                "absolute top-6 right-6 p-2 text-brand-dark/50 hover:text-brand-dark transition-colors z-10",
+                isSubmitting && "cursor-not-allowed opacity-40"
+              )}
             >
               <X size={24} />
             </button>
@@ -142,11 +187,21 @@ export const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                     </div>
 
                     <div className="md:col-span-2 pt-4">
+                      {submitError ? (
+                        <p className="mb-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                          {submitError}
+                        </p>
+                      ) : null}
+
                       <button 
                         type="submit"
-                        className="w-full group flex items-center justify-center gap-3 bg-brand-dark text-brand-offwhite py-4 rounded-2xl font-mono text-sm uppercase tracking-wider hover:bg-brand-orange transition-all duration-300 shadow-xl"
+                        disabled={isSubmitting}
+                        className={cn(
+                          "w-full group flex items-center justify-center gap-3 bg-brand-dark text-brand-offwhite py-4 rounded-2xl font-mono text-sm uppercase tracking-wider transition-all duration-300 shadow-xl",
+                          isSubmitting ? "cursor-wait opacity-80" : "hover:bg-brand-orange"
+                        )}
                       >
-                        <span>Send Request</span>
+                        <span>{isSubmitting ? 'Sending...' : 'Send Request'}</span>
                         <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       </button>
                     </div>
