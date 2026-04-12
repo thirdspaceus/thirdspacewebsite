@@ -87,9 +87,6 @@ export const Services = () => {
                        {service.title}
                      </h2>
                   </div>
-                  <h3 className="text-[17px] tracking-tight text-white/90 absolute bottom-6 left-6 md:bottom-8 md:left-8">
-                    {service.title}
-                  </h3>
                 </div>
 
                 {/* INACTIVE/COLLAPSED STATE - Vertical Strip */}
@@ -111,10 +108,7 @@ export const Services = () => {
                 >
                   {/* Left Content Context - Fixed width container prevents text wrap squishing! */}
                   <div className="relative z-20 flex-shrink-0 flex flex-col justify-center p-8 md:p-12 lg:p-[4rem] h-full order-2 md:order-1 overflow-y-auto no-scrollbar w-full md:w-[480px] lg:w-[600px]">
-                    <h3 className="text-2xl md:text-[1.8rem] lg:text-[2.2rem] leading-[1] tracking-[-0.04em] text-brand-offwhite mb-3 md:mb-4">
-                      {service.title}
-                    </h3>
-                    <p className="max-w-[48ch] text-[13px] md:text-[14px] leading-relaxed text-white/50 mb-10">
+                    <p className="max-w-[48ch] text-[13px] md:text-[14px] leading-relaxed text-white/50 mb-10 mt-6">
                       {service.description}
                     </p>
                     
