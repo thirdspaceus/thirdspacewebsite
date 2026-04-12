@@ -124,7 +124,7 @@ export const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                       >
                         <option value="branding">Branding & Identity</option>
                         <option value="web">Web Design & Dev</option>
-                        <option value="motion">Motion Systems</option>
+                        <option value="media">Media Creation</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
