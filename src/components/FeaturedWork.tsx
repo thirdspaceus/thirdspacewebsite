@@ -107,7 +107,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
 
 export const FeaturedWork = () => {
   return (
-    <section id="portfolio" className="bg-brand-beige px-3 pt-14 pb-0 md:px-5 md:pt-20 md:pb-0">
+    <section id="portfolio" className="bg-brand-beige px-3 pt-14 pb-6 md:px-5 md:pt-20 md:pb-8">
       <div className="mx-auto w-full max-w-[2048px]">
         <div className="mb-12 flex items-center gap-4">
           <h2 className="text-[clamp(2.8rem,6vw,5rem)] leading-[0.94] tracking-[-0.08em] text-brand-dark">
