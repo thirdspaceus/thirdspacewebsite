@@ -74,7 +74,7 @@ export const AboutUs = () => {
             viewport={{ once: true }}
             className="relative h-[400px] overflow-hidden rounded-xl border border-white/8 bg-[#141414] px-6 pt-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:px-8 lg:col-span-5 lg:px-10 flex flex-col"
           >
-            <div className="pointer-events-none absolute inset-x-[12%] top-10 h-24 rounded-full bg-brand-orange/5 blur-[50px]" />
+
             <div className="relative z-20 flex flex-col items-center gap-2 text-center mt-2">
               <h3 className="text-[20px] md:text-[22px] tracking-tight text-[#f3efe7]">
                 Based in Los Angeles, California
