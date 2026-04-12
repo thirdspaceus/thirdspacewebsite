@@ -22,7 +22,7 @@ const services = [
     ]
   },
   {
-    title: 'Motion Systems',
+    title: 'Media Creation',
     description: 'We design bold, scalable visuals—built for impact, movement, and modern storytelling. Whether crafted by hand or powered by AI, these systems bring your brand to life.',
     image: 'https://framerusercontent.com/images/oxZu28Q6bOJFLSa6KzaVpa1ZuI.png',
     features: [
