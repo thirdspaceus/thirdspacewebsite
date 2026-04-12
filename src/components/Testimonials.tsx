@@ -8,7 +8,7 @@ const testimonials = [
     title: 'Creative Producer',
     company: 'Independent',
     content:
-      "Everyone at this level has technical competence, but Jay's actual superpowers are the care he takes to understand the goal, collaborate on solutions, communicate, and bring the vision to life.",
+      "Ian and his team are phenomenal. Beyond their technical competence, their actual superpower is crafting marketing strategies that scale. They truly understood our goals and drove incredible growth for our business.",
     avatar: 'https://framerusercontent.com/images/aK2N9pQjZF2ezpCvk9hSL3G8hk.png',
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
     title: 'CEO & Co-Founder',
     company: 'Kastle AI',
     content:
-      "Jay is a beast. High quality work in a short timeframe. His motion and graphic work is truly game-changing, and the entire process felt sharp, thoughtful, and easy from start to finish.",
+      "Ian is a beast when it comes to growth. High-quality leads and conversions in a short timeframe. Their marketing work is truly game-changing, making our brand scale effortlessly from start to finish.",
     avatar: 'https://framerusercontent.com/images/8z04o6v7rIqxWxJ75fNYMhGKsuU.jpeg',
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     title: 'Co-Founder',
     company: 'Work Is Play',
     content:
-      "Jay's the real deal. Not only a Framer pro, but someone who genuinely cares. He brought ideas, polish, and extra miles we didn't even ask for, and the final result was better because of it.",
+      "Ian's the real deal. Not only a marketing pro, but someone who genuinely cares about your bottom line. He brought growth strategies and data-driven insights we didn't even ask for, massively accelerating our business.",
     avatar: 'https://framerusercontent.com/images/ib8eUVV7MoIJY6gFvoxjarXfCs.jpeg',
   },
   {
@@ -32,7 +32,7 @@ const testimonials = [
     title: 'Founding Partner',
     company: 'Major Media',
     content:
-      "Jay is truly in a league of his own. He's incredibly talented and creative, but also easy and fun to work with. The collaboration felt clear, fast, and genuinely enjoyable the whole way through.",
+      "Ian is truly in a league of his own. He's incredibly talented at growth marketing, but also easy and fun to work with. His agency transformed our brand reach and systematically expanded our business.",
     avatar: 'https://framerusercontent.com/images/EUj0OQgRkkRHSjBTt9kvwUhUA.jpeg',
   },
 ];
