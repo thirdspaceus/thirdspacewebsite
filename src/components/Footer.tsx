@@ -17,22 +17,16 @@ export const Footer = () => {
       { name: 'Privacy Policy', href: '#' },
       { name: 'Cookie Settings', href: '#' },
     ],
-    store: [
-      { name: 'Mockups', href: '#' },
-      { name: 'Framer Templates', href: '#' },
-      { name: 'Freebies', href: '#' },
-    ],
     socials: [
       { name: 'Instagram', href: '#', icon: <Instagram size={14} /> },
       { name: 'LinkedIn', href: '#', icon: <Linkedin size={14} /> },
       { name: 'Behance', href: '#', icon: <ArrowUpRight size={14} /> },
-      { name: 'Awwwards', href: '#', icon: <ArrowUpRight size={14} /> },
     ]
   };
 
   return (
     <footer className="bg-brand-beige px-3 pb-3 md:px-5 md:pb-5">
-      <div className="flex min-h-[420px] flex-col justify-between rounded-[28px] bg-brand-dark px-6 py-10 md:px-8 md:py-12 lg:px-10">
+      <div className="flex min-h-[420px] flex-col justify-between rounded-xl bg-brand-dark px-6 py-10 md:px-8 md:py-12 lg:px-10">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="flex flex-col gap-5 lg:col-span-4">
             <h2 className="text-[clamp(2rem,4vw,3rem)] leading-none tracking-[-0.06em] text-brand-offwhite">ThirdSpace Studio.</h2>
@@ -44,7 +38,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:col-span-8">
+          <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:col-span-8">
             <div className="flex flex-col gap-6">
               <span className="text-sm text-brand-offwhite">Index</span>
               <ul className="flex flex-col gap-3">
@@ -67,16 +61,7 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="flex flex-col gap-6">
-              <span className="text-sm text-brand-offwhite">Digital Store</span>
-              <ul className="flex flex-col gap-3">
-                {links.store.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href} className="text-sm text-white/56 transition-colors hover:text-brand-offwhite">{link.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+
 
             <div className="flex flex-col gap-6">
               <span className="text-sm text-brand-offwhite">Socials</span>
