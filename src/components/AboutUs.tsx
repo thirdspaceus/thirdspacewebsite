@@ -76,9 +76,10 @@ export const AboutUs = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-8 rounded-xl border border-white/5 bg-[#141414] p-8 md:grid-cols-[35%_1fr] md:p-8 lg:col-span-12 lg:grid-cols-[25%_1fr] lg:gap-12 items-center"
+            className="flex flex-col md:flex-row overflow-hidden rounded-xl border border-white/5 bg-[#141414] lg:col-span-12"
           >
-            <div className="group/photo relative w-full max-w-[320px] mx-auto aspect-square md:aspect-[4/5] md:max-h-[380px] overflow-hidden rounded-xl transition-all duration-700">
+            {/* Image fills left column entirely */}
+            <div className="group/photo relative w-full md:w-[35%] lg:w-[25%] h-[300px] md:h-auto overflow-hidden shrink-0 transition-all duration-700">
               <div className="pointer-events-none absolute inset-0 z-10 bg-brand-orange opacity-0 mix-blend-color transition-opacity duration-500 group-hover/photo:opacity-40" />
               <img
                 src="/founder-photo.png"
@@ -87,13 +88,14 @@ export const AboutUs = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute bottom-6 left-6 z-20 flex flex-col gap-1">
-                <span className="text-xl text-white">Ian Lagac</span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/70">Founder and CEO</span>
+                <span className="text-[14px] font-medium tracking-tight text-white shadow-black drop-shadow-md">Ian Lagac</span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/70 shadow-black drop-shadow-md">Founder & CEO</span>
               </div>
             </div>
 
-            <div className="flex flex-col justify-between gap-8 py-2">
-              <div className="flex flex-col gap-6">
+            {/* Text content receives the padding */}
+            <div className="flex flex-col justify-center p-8 md:p-10 lg:p-12 xl:px-16 flex-1">
+              <div className="mb-6 flex flex-col gap-6">
                 <h3 className="text-3xl tracking-[-0.05em] text-brand-offwhite">The Founder</h3>
                 <p className="text-xs leading-relaxed text-brand-grey lg:text-sm">
                   Ian founded ThirdSpace after spending the early part of his career in agencies. His ambition has always been to bring movement into traditionally static brand systems, a vision now fully aligned with today&apos;s digital landscape.
