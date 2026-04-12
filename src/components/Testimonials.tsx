@@ -111,7 +111,7 @@ export const Testimonials = () => {
             {marqueeTestimonials.map((testimonial, index) => (
               <article
                 key={`${testimonial.name}-${index}`}
-                className={`group/card relative shrink-0 rounded-2xl border border-black/5 bg-[#090909] px-7 py-8 text-brand-offwhite shadow-lg transition-colors duration-500 hover:bg-brand-orange hover:border-brand-orange ${cardWidths[index % cardWidths.length]} ${cardOffsets[index % cardOffsets.length]}`}
+                className={`group/card relative shrink-0 rounded-2xl border border-black/5 bg-[#141414] px-7 py-8 text-brand-offwhite shadow-lg transition-colors duration-500 hover:bg-brand-orange hover:border-brand-orange ${cardWidths[index % cardWidths.length]} ${cardOffsets[index % cardOffsets.length]}`}
               >
                  <div className="flex flex-col justify-between gap-8 h-full min-h-[250px]">
                   <p className="relative z-10 text-[13px] leading-[1.65] tracking-tight text-[#f2eee7] transition-colors duration-500 group-hover/card:text-white md:text-[14px]">
