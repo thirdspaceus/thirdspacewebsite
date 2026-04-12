@@ -2,11 +2,11 @@ import React from 'react';
 import { ArrowDown } from 'lucide-react';
 
 const logos = [
-  { name: 'Emma - The Sleep Company', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Emma_The_Sleep_Company_Logo.svg/512px-Emma_The_Sleep_Company_Logo.svg.png' },
-  { name: 'Nike', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/512px-Logo_NIKE.svg.png' },
-  { name: 'Under Armour', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Under_armour_logo.svg/512px-Under_armour_logo.svg.png' },
-  { name: 'Sony', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sony_logo.svg/512px-Sony_logo.svg.png' },
-  { name: 'Netflix', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/512px-Netflix_2015_logo.svg.png' }
+  { name: 'Emma Sleep Company', url: '/emma-logo.png' },
+  { name: 'Cafe', url: '/cafe-logo.png' },
+  { name: 'Doquaos', url: '/doquaos-logo.png' },
+  { name: 'Livewright', url: '/livewright-logo.webp' },
+  { name: 'Naya', url: '/naya-logo.webp' }
 ];
 
 export const LogoTicker = () => {
