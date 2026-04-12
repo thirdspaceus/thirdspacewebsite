@@ -38,7 +38,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           initial={{ y: 100, opacity: 0, scale: 0.9 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-          className="pointer-events-none absolute bottom-[-5%] right-[-15%] z-10 w-[80%] min-w-[280px] max-w-[800px] opacity-40 sm:bottom-[-10%] sm:right-[-10%] sm:w-[90%] sm:min-w-[400px] sm:opacity-80 md:bottom-[-20%] md:right-[-5%] md:w-[55%] md:min-w-[500px] md:opacity-100 lg:w-[45%]"
+          className="hidden pointer-events-none absolute bottom-[-5%] right-[-15%] z-10 w-[80%] min-w-[280px] max-w-[800px] opacity-40 sm:block sm:bottom-[-10%] sm:right-[-10%] sm:w-[90%] sm:min-w-[400px] sm:opacity-80 md:bottom-[-20%] md:right-[-5%] md:w-[55%] md:min-w-[500px] md:opacity-100 lg:w-[45%]"
         >
           <img
             src="/hero-graphic.png"
@@ -109,7 +109,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
           >
-            Est. in 2019
+            Est. in 2026
           </motion.div>
         </div>
       </div>

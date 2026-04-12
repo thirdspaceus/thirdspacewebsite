@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Instagram, Linkedin, Facebook, ArrowUpRight } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,7 +7,6 @@ export const Footer = () => {
   const links = {
     index: [
       { name: 'Home', href: '#' },
-      { name: 'Work', href: '#portfolio' },
       { name: 'Services', href: '#services' },
       { name: 'About Us', href: '#about-us' },
       { name: 'Index', href: '#index' },
@@ -18,9 +17,12 @@ export const Footer = () => {
       { name: 'Cookie Settings', href: '#' },
     ],
     socials: [
-      { name: 'Instagram', href: '#', icon: <Instagram size={14} /> },
-      { name: 'LinkedIn', href: '#', icon: <Linkedin size={14} /> },
-      { name: 'Behance', href: '#', icon: <ArrowUpRight size={14} /> },
+      { name: 'Facebook', href: 'https://www.facebook.com/thirdspaceus', icon: <Facebook size={14} /> },
+      { name: 'Instagram', href: 'https://www.instagram.com/thirdspaceus', icon: <Instagram size={14} /> },
+      { name: 'TikTok', href: 'https://www.tiktok.com/@thirdspaceus', icon: <ArrowUpRight size={14} /> },
+      { name: 'Linktree', href: 'https://linktr.ee/thirdspaceus', icon: <ArrowUpRight size={14} /> },
+      { name: 'Behance', href: 'https://www.behance.net/thirdspaceus', icon: <ArrowUpRight size={14} /> },
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/company/thirdspaceus/', icon: <Linkedin size={14} /> },
     ]
   };
 
@@ -32,8 +34,8 @@ export const Footer = () => {
             <h2 className="text-[clamp(2rem,4vw,3rem)] leading-none tracking-[-0.06em] text-brand-offwhite">ThirdSpace Studio.</h2>
             <div className="flex flex-col gap-1 text-sm text-white/62">
               <p>Los Angeles, California</p>
-              <a href="mailto:hello@thirdspace.com" className="transition-colors hover:text-brand-offwhite">
-                hello@thirdspace.com
+              <a href="mailto:hello@thirdspaceus.com" className="transition-colors hover:text-brand-offwhite">
+                hello@thirdspaceus.com
               </a>
             </div>
           </div>
