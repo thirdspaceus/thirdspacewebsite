@@ -95,7 +95,7 @@ export const Services = () => {
                     !isDefault && !isActive ? "opacity-100" : "opacity-0 pointer-events-none"
                   }`}
                 >
-                  <span className="md:-rotate-90 whitespace-nowrap text-brand-offwhite font-heading text-[15px] md:text-[17px] tracking-tight opacity-40 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="md:-rotate-90 whitespace-nowrap text-brand-offwhite font-heading font-bold text-xl md:text-2xl tracking-tight opacity-40 transition-opacity duration-300 group-hover:opacity-100">
                     {service.title}
                   </span>
                 </div>
