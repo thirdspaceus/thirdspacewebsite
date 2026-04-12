@@ -68,7 +68,7 @@ export const Services = () => {
               <div
                 key={service.title}
                 onClick={() => handleSelection(index)}
-                className={`group relative overflow-hidden rounded-xl border border-white/5 bg-[#080808] cursor-pointer transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-white/10 ${
+                className={`group relative overflow-hidden rounded-xl border border-white/5 bg-[#080808] cursor-pointer transition-all duration-500 ease-in-out hover:border-white/10 ${
                   isDefault
                     ? "flex-1 h-full"
                     : isActive 
@@ -78,8 +78,8 @@ export const Services = () => {
               >
                 {/* DEFAULT STATE - 3 Equal Panels */}
                 <div 
-                  className={`absolute inset-0 flex flex-col p-8 transition-opacity duration-500 ${
-                    isDefault ? "opacity-100 delay-[300ms]" : "opacity-0 pointer-events-none"
+                  className={`absolute inset-0 flex flex-col p-8 transition-opacity duration-300 ${
+                    isDefault ? "opacity-100 delay-150" : "opacity-0 pointer-events-none"
                   }`}
                 >
                   <div className="flex-1 w-full h-full relative flex items-center justify-center pb-8 px-6">
@@ -102,8 +102,8 @@ export const Services = () => {
 
                 {/* ACTIVE/EXPANDED STATE - Detailed Reveal */}
                 <div 
-                  className={`absolute inset-0 flex flex-col md:flex-row items-center transition-opacity duration-500 ${
-                    isActive ? "opacity-100 delay-[300ms]" : "opacity-0 pointer-events-none"
+                  className={`absolute inset-0 flex flex-col md:flex-row items-center transition-opacity duration-300 ${
+                    isActive ? "opacity-100 delay-150" : "opacity-0 pointer-events-none"
                   }`}
                 >
                   {/* Left Content Context - Fixed width container prevents text wrap squishing! */}
