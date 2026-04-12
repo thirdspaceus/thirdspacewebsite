@@ -24,7 +24,7 @@ export const LogoTicker = () => {
               <img
                 src={logo.url}
                 alt={logo.name}
-                className="h-8 w-auto grayscale opacity-38 transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:h-10"
+                className="h-14 w-auto object-contain transition-transform duration-500 hover:scale-105 md:h-16 lg:h-20"
                 referrerPolicy="no-referrer"
               />
             </div>
