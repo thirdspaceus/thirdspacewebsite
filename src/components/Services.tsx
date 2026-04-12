@@ -82,12 +82,10 @@ export const Services = () => {
                     isDefault ? "opacity-100 delay-[300ms]" : "opacity-0 pointer-events-none"
                   }`}
                 >
-                  <div className="flex-1 w-full h-full relative flex items-center justify-center pb-8">
-                     <img 
-                       src={service.image} 
-                       alt={service.title}
-                       className="w-[85%] md:w-[75%] max-h-[75%] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-transform duration-[800ms] ease-out group-hover:scale-105" 
-                     />
+                  <div className="flex-1 w-full h-full relative flex items-center justify-center pb-8 px-6">
+                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-orange-500 uppercase text-center leading-[0.9] tracking-tighter drop-shadow-lg transition-transform duration-[800ms] ease-out group-hover:scale-105">
+                       {service.title}
+                     </h2>
                   </div>
                   <h3 className="text-[17px] tracking-tight text-white/90 absolute bottom-6 left-6 md:bottom-8 md:left-8">
                     {service.title}
@@ -131,13 +129,11 @@ export const Services = () => {
                   </div>
 
                   {/* Right Graphical Overlay */}
-                  <div className="relative z-10 w-full h-[40%] md:flex-1 md:h-full md:absolute right-0 top-0 order-1 md:order-2 flex items-center justify-center pointer-events-none p-6 md:p-0">
+                  <div className="relative z-10 w-full h-[40%] md:flex-1 md:h-full md:absolute right-0 top-0 order-1 md:order-2 flex items-center justify-center pointer-events-none p-6 md:p-8">
                     <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#080808] via-[#080808]/70 to-transparent z-10 w-1/3 left-0" />
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-[70%] max-w-[300px] md:max-w-none md:w-auto md:h-[80%] lg:h-[90%] object-contain md:absolute md:right-[-2%] md:top-1/2 md:-translate-y-1/2 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] saturate-[1.15]" 
-                    />
+                    <h2 className="text-5xl md:text-6xl lg:text-[5.5rem] font-black text-orange-500 uppercase text-center md:text-right leading-[0.85] tracking-tighter drop-shadow-2xl md:absolute md:right-8 md:top-1/2 md:-translate-y-1/2 opacity-90">
+                      {service.title}
+                    </h2>
                   </div>
                 </div>
               </div>
