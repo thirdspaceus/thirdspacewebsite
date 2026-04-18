@@ -4,7 +4,7 @@ import { Check, ArrowRight, ArrowDown } from 'lucide-react';
 
 const pricingPlans = [
   {
-    name: 'Branding',
+    name: 'Launchpad',
     price: '5,000',
     description: 'Perfect for startups looking to establish a strong visual foundation.',
     features: [
@@ -19,7 +19,7 @@ const pricingPlans = [
     popular: false
   },
   {
-    name: 'Digital',
+    name: 'Pro',
     price: '12,000',
     description: 'High-end web experiences that convert and tell your brand story.',
     features: [
@@ -34,7 +34,7 @@ const pricingPlans = [
     popular: true
   },
   {
-    name: 'Full Studio',
+    name: 'Thirdspace Plan',
     price: '25,000',
     description: 'The complete package for brands ready to dominate their market.',
     features: [
@@ -61,7 +61,7 @@ export const Pricing = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
           </div>
           <h2 className="max-w-[14ch] text-[clamp(2.8rem,5vw,5rem)] leading-[0.92] tracking-[-0.08em] text-brand-dark">
             Transparent Pricing.<br />
-            No Hidden BS<span className="text-brand-orange">.</span>
+            Because you deserve it<span className="text-brand-orange">.</span>
           </h2>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-brand-grey md:text-base">
             We believe in clear communication and fair value. Choose a plan that fits your current stage or reach out for a custom execution.

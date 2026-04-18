@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react';
 
 const services = [
   {
-    title: 'Branding Identity',
+    title: 'Brand Identity',
     description: 'We design brands, systems, and experiences that feel intentional from the first tap to the last interaction.',
     image: 'https://framerusercontent.com/images/fsnxfPl4xnUJdyQSiOcHEYxg.png',
     features: [
@@ -13,7 +13,7 @@ const services = [
     ]
   },
   {
-    title: 'Web Design & Dev',
+    title: 'Web Design and Development',
     description: 'We build fast, responsive, and future-ready digital products using modern tools and frameworks.',
     image: 'https://framerusercontent.com/images/o5rue2juXI7jXmJGLCQ0tEIHzw.png',
     features: [
@@ -22,7 +22,7 @@ const services = [
     ]
   },
   {
-    title: 'Media Creation',
+    title: 'Media Marketing',
     description: 'We capture your brand\'s story through stunning photography and high-quality video production, delivering compelling visual narratives tailored for modern platforms.',
     image: 'https://framerusercontent.com/images/oxZu28Q6bOJFLSa6KzaVpa1ZuI.png',
     features: [

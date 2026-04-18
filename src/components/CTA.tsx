@@ -21,7 +21,7 @@ export const CTA = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
             viewport={{ once: true }}
             className="text-[clamp(4rem,11vw,8rem)] leading-[0.82] tracking-[-0.08em] text-brand-dark"
           >
-            LET&apos;S CUT
+            LET&apos;S BUILD
           </motion.h2>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export const CTA = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
             transition={{ delay: 0.1 }}
             className="text-[clamp(4rem,11vw,8rem)] leading-[0.82] tracking-[-0.08em] text-brand-dark"
           >
-            THE BS<span className="text-brand-orange">.</span>
+            YOUR BRAND<span className="text-brand-orange">.</span>
           </motion.h2>
         </div>
 
