@@ -22,6 +22,7 @@ const pricingPlans = [
     name: 'Pro',
     price: '12,000',
     description: 'High-end web experiences that convert and tell your brand story.',
+    subtext: 'Upgrade from Launchpad for $7,500',
     features: [
       'Custom Web Design',
       'Framer / Webflow Development',
@@ -37,6 +38,7 @@ const pricingPlans = [
     name: 'Thirdspace Plan',
     price: '25,000',
     description: 'The complete package for brands ready to dominate their market.',
+    subtext: 'Upgrade from Pro for $15,000',
     features: [
       'Full Brand Identity',
       'Premium Web Experience',
@@ -103,6 +105,12 @@ export const Pricing = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
                   ${plan.price}
                 </span>
               </div>
+              
+              {'subtext' in plan && plan.subtext ? (
+                <div className={`-mt-4 mb-8 text-xs font-medium uppercase tracking-widest font-mono ${plan.popular ? 'text-brand-orange' : 'text-brand-orange-deep'}`}>
+                  {plan.subtext as string}
+                </div>
+              ) : null}
 
               <div className="mb-10 flex flex-1 flex-col gap-4">
                 <span className={`font-mono text-[10px] uppercase tracking-[0.22em] ${plan.popular ? 'text-white/40' : 'text-black/40'}`}>

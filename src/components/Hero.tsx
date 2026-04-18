@@ -73,16 +73,9 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
             </motion.div>
 
             <motion.div variants={itemVariants} className="mt-6 flex flex-wrap gap-4">
-              <a
-                href="#portfolio"
-                className="flex items-center gap-2 rounded-lg bg-[#f3f3f3] px-5 py-2.5 font-mono text-[9px] uppercase tracking-[0.24em] text-brand-dark transition-all duration-300 hover:scale-105 hover:bg-brand-orange hover:text-white"
-              >
-                <span>View Projects</span>
-                <ArrowRight size={10} />
-              </a>
               <button
                 onClick={onOpenQuote}
-                className="flex items-center gap-2 rounded-lg bg-[#181818] px-5 py-2.5 font-mono text-[9px] uppercase tracking-[0.24em] text-white transition-colors duration-300 hover:bg-brand-orange hover:text-white"
+                className="flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 font-mono text-[9px] uppercase tracking-[0.24em] text-brand-dark transition-colors duration-300 hover:bg-brand-orange hover:text-white"
               >
                 <span>Get a quote</span>
                 <ArrowRight size={10} />
@@ -108,6 +101,7 @@ export const Hero = ({ onOpenQuote }: { onOpenQuote: () => void }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
+            className="pointer-events-auto text-white z-50 font-medium"
           >
             Est. in 2026
           </motion.div>
